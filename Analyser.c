@@ -18,9 +18,9 @@ main(void)
     //Declaring string arrays
     
 	char *mn[50] = {"ADD","DIV","MULT","SUB","READ","MOV","START","STOP"};	//Mnemonic codes
-	char *reg [50]= {"AREG","BREG","CREG","DREG"};							//Registors
-	char *symbols[50] = {"!","#","%","$",",","'"};							//Symbols
-	char *aDir[50] = {"DS","DC","LTORG","ORIGIN","EQU"};					//Assembly directives
+	char *reg [50]= {"AREG","BREG","CREG","DREG"};				//Registors
+	char *symbols[50] = {"!","#","%","$",",","'"};				//Symbols
+	char *aDir[50] = {"DS","DC","LTORG","ORIGIN","EQU"};			//Assembly directives
 	
     char ch;
     char str[127];	//String buffer
@@ -52,14 +52,14 @@ main(void)
     {
     	int m = 0,r = 0,sym=0,dir=0;
     	
-        if (fgets(str, 126, a)){
+        if (fgets(str, 126, a)){	//Getting first line from token file
         	
         //checking mnemonic code	
           for(i=0;i<8;i++){
 		   	
-		   	int res = strncmp(str,mn[i],3);
+		   	int res = strncmp(str,mn[i],3);		//Comparing the string upto 3 digits
 		   	
-			if(res == 0){
+			if(res == 0){			
 				 
 				   printf("%s : Mnemonic code",str);
 				   m = 1;			
@@ -114,12 +114,12 @@ main(void)
         	
         //Checking digits and constant
         
-          if(m == 0 && r == 0 && dir == 0 && sym == 0){
+          if(m == 0 && r == 0 && dir == 0 && sym == 0){		//If none of the string matches continue with this if
           	
-          		if(isdigit(str[0]))
+          		if(isdigit(str[0]))			//Checking for digit
 				   printf("%s : Digit ",str);
 				
-				else
+				else				//Other than digits 
 				   printf("%s : Constant",str);	   
 					
 		}
