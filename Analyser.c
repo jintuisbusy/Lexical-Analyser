@@ -48,7 +48,7 @@ main(void)
     
     a = fopen("tokens.txt", "r");		//Pointing to token file
 
-    while (!feof(a))	 //Reading contents of tokens
+    while (!feof(a))	 //Reading content of tokens.txt
     {
     	int m = 0,r = 0,sym=0,dir=0;
     	
@@ -68,7 +68,7 @@ main(void)
 		
 		printf("\n");
 
-		//checing registors
+		//checking registors
 		  for(i=0;i<4;i++){
 		   
 			int res = strncmp(str,reg[i],4);	   
@@ -83,7 +83,7 @@ main(void)
 			printf("\n");  
 			
 		
-		//checing symbols
+		//checking symbols
 		  for(i=0;i<6;i++){
 		   
 			int res = strncmp(str,symbols[i],1);	   
@@ -98,7 +98,7 @@ main(void)
 			printf("\n"); 	
 
 
-		//checing assembly directive
+		//checking assembly directive
 		  for(i=0;i<5;i++){
 		   
 			int res = strncmp(str,aDir[i],2);	   
