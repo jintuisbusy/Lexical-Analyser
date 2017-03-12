@@ -119,8 +119,8 @@ main(void)
           		if(isdigit(str[0]))			//Checking for digit
 				   printf("%s : Digit ",str);
 				
-				else				//Other than digits 
-				   printf("%s : Constant",str);	   
+				else				//Operand
+				   printf("%s : Operand",str);	   
 					
 		}
 		
