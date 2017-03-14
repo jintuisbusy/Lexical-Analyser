@@ -61,13 +61,11 @@ main(void)
 		   	
 			if(res == 0){			
 				 
-				   printf("%s : Mnemonic code",str);
+				   printf("%s : Mnemonic code\n",str);
 				   m = 1;			
         	}
 		}
 		
-		printf("\n");
-
 		//checking registors
 		  for(i=0;i<4;i++){
 		   
@@ -75,13 +73,11 @@ main(void)
 		   
 		   	if(res == 0){
 				 
-				   printf("%s : Register",str); 
+				   printf("%s : Register\n",str); 
 				   r = 1;
 				}
         }
         
-			printf("\n");  
-			
 		
 		//checking symbols
 		  for(i=0;i<6;i++){
@@ -90,14 +86,12 @@ main(void)
 		   
 		   	if(res == 0){
 				 
-				   printf("%s : Symbol",str); 
+				   printf("%s : Symbol\n",str); 
 				   sym = 1;
 				}
         }
         
-			printf("\n"); 	
-
-
+	
 		//checking assembly directive
 		  for(i=0;i<5;i++){
 		   
@@ -105,27 +99,24 @@ main(void)
 		   
 		   	if(res == 0){
 				 
-				   printf("%s : Assembly directive ",str); 
+				   printf("%s : Assembly directive \n",str); 
 				   dir = 1;
 				}
         }
-        
-			printf("\n"); 				      
+            
         	
         //Checking digits and constant
         
           if(m == 0 && r == 0 && dir == 0 && sym == 0){		//If none of the string matches continue with this if
           	
           		if(isdigit(str[0]))			//Checking for digit
-				   printf("%s : Digit ",str);
+				   printf("%s : Digit \n",str);
 				
 				else				//Operand
-				   printf("%s : Operand",str);	   
+				   printf("%s : Symbol \n",str);	   
 					
 		}
-		
-		printf("\n");
-	          
+			          
   	  }
    
 	}	//End of token file
