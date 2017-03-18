@@ -21,6 +21,7 @@ main(void)
 	char *reg [50]= {"AREG","BREG","CREG","DREG"};				//Registors
 	char *symbols[50] = {"!","#","%","$",",","'"};				//Symbols
 	char *aDir[50] = {"DS","DC","LTORG","ORIGIN","EQU"};			//Assembly directives
+	int opCode[50] = {0001,0002,0003,0004,0005,0006,0007,0008};		//Opcodes
 	
     char ch;
     char str[127];	//String buffer
@@ -61,7 +62,7 @@ main(void)
 		   	
 			if(res == 0){			
 				 
-				   printf("%s : Mnemonic code\n",str);
+				   printf("%s : Mnemonic code and Corresponding Opcode is : %d\n",str,opCode[i]);
 				   m = 1;			
         	}
 		}
